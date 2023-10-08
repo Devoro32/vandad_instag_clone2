@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase_core/firebase_core.dart';
-// import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+//import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  await Firebase.initializeApp(
+      //   options: DefaultFirebaseOptions.currentPlatform,
+      );
   runApp(const MyApp());
 }
 
@@ -48,9 +48,11 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           ElevatedButton(
-            onPressed: () {},
-            child: Text('Testing'),
+            onPressed: () {
+              print('Pressed');
+            },
             style: ElevatedButton.styleFrom(primary: Colors.red),
+            child: const Text('Testing'),
           ),
         ],
       ),
